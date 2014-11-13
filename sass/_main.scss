@@ -1,0 +1,162 @@
+.box{
+  @include border-radius(5px);
+  @include pie-clearfix;
+}
+
+.container{
+  @include container;
+  @include clearfix;
+  padding-left: 6%;
+  padding-right: 6%;
+}
+
+ul.video-list{
+  list-style: none;
+  padding: 0px;
+}
+
+li.youtube-item{
+  width: 100%;
+  height: 50px;
+  border: 1px solid black;
+  margin: 20px 0px;
+}
+
+li.youtube-item:hover{
+  background: #bdc3c7;
+}
+
+li.currentVid{
+  background: #2980b9;
+}
+
+input[type="text"]{
+  width: 99%;
+  margin: .5rem 0;
+  background: white;
+  border: 1px solid #555459;
+  color: #555459;
+  font-size: 1.1rem;
+
+  &:focus {
+    border-color: #439fe0;
+  }
+}
+
+input[type="submit"]{
+  width: 100% !important;
+  padding: .75rem 1.25rem;
+  margin: .5rem 0;
+  background: #439fe0;
+  color: white;
+  font-size: 15px;
+  font-weight: 400;
+  padding: .75rem 2rem;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+  border-bottom: 2px solid #194ba3;
+  vertical-align: bottom;
+  cursor: pointer;
+  transition: background .1s;
+  @include border-radius(4px, 4px);
+}
+
+.prev{
+  float: left;
+}
+
+.ag1 {
+  @include span(2 of 10);
+}
+
+.ag2 {
+  @include span(10 of 10);
+  @include clearfix;
+  @include breakpoint(600px) {
+    @include span(10 of 10);
+  }
+  // desktop view
+  @include breakpoint(900px) {
+    @include span(10 of 10);
+  }
+}
+
+.ag3 {
+  @include span(6 of 9);
+}
+
+.ag4{
+  @include clearfix;
+  @include span(3 of 9 last);
+}
+
+.ag8 {
+  @include span(2 of 8);
+}
+
+.ag9 {
+  @include span(2 of 8 last);
+}
+
+.ag5 {
+  @include span(4 of 8);
+}
+
+.ag6 {
+  @include span(4 of 8 last);
+}
+
+
+
+
+.ag7 {
+  @include span(4 of 6 last);
+  @include clearfix;
+}
+
+
+
+.ag10 {
+  clear: both;
+  // Alternatively, you can now use the span mixin with the full keyword to tell Susy this should be a 100% width
+  // @include span(full);
+}
+
+
+/**
+ * Styles for AG grids & Container
+ */
+
+.container {
+  background-color: #FFF;
+}
+
+.ag1, .ag3 {
+  // background-color: #71dad2;
+}
+
+.ag2 {
+  // background-color: #fae7b3;
+}
+
+.ag4,.ag5{
+  // background-color: #ee9e9c;
+}
+
+.ag8,.ag9 {
+  text-align: center;
+  // background-color: #27ae60;
+}
+
+
+.ag6 {
+  // background-color: #f09671;
+}
+
+.ag7 {
+  background-color: #f6d784;
+}
+
+.ag10 {
+  background-color: #ea9fc3;
+}
+

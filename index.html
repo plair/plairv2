@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plair</title>
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+    <link rel="stylesheet" href="stylesheets/screen.css">
+    <script data-main="js/boot" src="js/libs/require.js"></script>
+
+    <script id="youtubeTemplate" type="text/template">
+      <p><%= title %></p><button class="removeTrack">X</a></button>
+    </script>
+</head>
+  <body>
+    <div class="container">
+        <div class="ag ag3" id="main">
+            <div id="player"></div>
+        </div>
+        <div class="ag ag4 sidebar">
+          <form id="addVideo">
+            <h2>Enter Vid: </h2>
+            <input type="text" name="linkcode"><br>
+            <input type="submit" value="Submit">
+          </form>
+            <button class="nav next">Next >></button>
+            <button class="nav prev"><< Prev</button>
+        </div>
+    </div>
+
+  </body>
+</html>
