@@ -62,6 +62,11 @@ input[type="submit"]{
 
 .prev{
   float: left;
+  display: inline-block;
+}
+
+.next{
+  display: inline-block;
 }
 
 .ag1 {

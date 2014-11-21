@@ -7,7 +7,7 @@ define([
   'collections/YoutubeVideoCollection'
   ], function($, _, Backbone, YoutubeVideo, YoutubeVideoView, YoutubeVideoCollection){
   var YoutubeVideoCollectionView = Backbone.View.extend({
-    tagName: 'ul',
+    tagName: 'ol',
     className: "video-list",
     initialize: function() {
       this.render();

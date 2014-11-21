@@ -3,7 +3,9 @@ define(['underscore', 'backbone'], function(_, Backbone) {
 
     defaults: {
       title: "",
-      youtubeCode: ""
+      youtubeCode: "",
+      trackNumber:"",
+      currentTrack: false
     },
     initialize: function() {
 

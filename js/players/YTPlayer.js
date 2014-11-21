@@ -27,44 +27,16 @@ define([
        events: {
          'onReady': function() {
            EventDispatcher.trigger('playerLoaded');
-           $('li.youtube-item').click(function(){
-              var currentVid = $('li.currentVid');
-              var nextCode = $(this).data("youtube");
-              $(this).addClass("currentVid");
-              currentVid.removeClass("currentVid");
-              YTPlayer.cueVideoWithId(nextCode);
-              YTPlayer.startPlayback();
-            });
-
-            $('button.next').click(function(){
-              var currentVid = $('li.currentVid');
-              var nextCode = currentVid.next().data("youtube");
-              console.log( "nextCode", nextCode);
-              // player.cueVideoById({videoId: nextCode});
-              currentVid.next().addClass("currentVid");
-              currentVid.removeClass("currentVid");
-              YTPlayer.cueVideoWithId(nextCode);
-              YTPlayer.startPlayback();
-            });
-
-            $('button.prev').click(function(){
-              var currentVid = $('li.currentVid');
-              var nextCode = currentVid.prev().data("youtube");
-              YTPlayer.cueVideoWithId(nextCode);
-              currentVid.prev().addClass("currentVid");
-              currentVid.removeClass("currentVid");
-              YTPlayer.startPlayback();
-            });
          },
           'onStateChange': function(){
-            if(YTPlayer.getPlayerState() === 0){
-              var currentVid = $('li.currentVid');
-              var nextCode = currentVid.next().data("youtube");
-              currentVid.next().addClass("currentVid");
-              currentVid.removeClass("currentVid");
-              YTPlayer.cueVideoWithId(nextCode);
-              YTPlayer.startPlayback();
-            }
+            // if(YTPlayer.getPlayerState() === 0){
+            //   var currentVid = $('li.currentVid');
+            //   var nextCode = currentVid.next().data("youtube");
+            //   currentVid.next().addClass("currentVid");
+            //   currentVid.removeClass("currentVid");
+            //   YTPlayer.cueVideoWithId(nextCode);
+            //   YTPlayer.startPlayback();
+            // }
           }
        }
      });
@@ -103,6 +75,14 @@ define([
        player.getPlayerState();
      }
    },
+
+   playNext: function(){
+    console.log("playNext triggered");
+   },
+
+   testFunction: function(){
+      console.log("dis is da test function");
+   }
  };
 
  return YTPlayer;

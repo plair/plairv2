@@ -22,7 +22,8 @@ define([
 
     initialize: function() {
       this.render();
-      this.model.on('destroy', this.remove(), this);
+      this.model.on('destroy', this.remove, this);
+      this.model.on("change:currentTrack", this.changeCurrentState, this);
     },
 
     render: function() {
@@ -35,6 +36,10 @@ define([
     },
     remove: function(){
       this.$el.remove();
+    },
+    changeCurrentState: function(){
+      this.$el.toggleClass("currentVid");
+      console.log("changeCurrentState", this.$el);
     }
   });
   return YoutubeVideoView;

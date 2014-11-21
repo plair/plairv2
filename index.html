@@ -10,7 +10,18 @@
     <script data-main="js/boot" src="js/libs/require.js"></script>
 
     <script id="youtubeTemplate" type="text/template">
-      <p><%= title %></p><button class="removeTrack">X</a></button>
+      <p><%=trackNumber%>  <%= title %></p><button class="removeTrack">X</a></button>
+    </script>
+
+    <script id="navTemplate" type="text/template">
+        <form id="addVideo">
+            <h2>Enter Vid: </h2>
+            <input type="text" name="linkcode"><br>
+            <input type="submit" value="Submit">
+          </form>
+            <button class="nav next">Next >></button>
+            <button class="nav prev"><< Prev</button>
+            <ol class="playlist"></ol>
     </script>
 </head>
   <body>
@@ -19,13 +30,7 @@
             <div id="player"></div>
         </div>
         <div class="ag ag4 sidebar">
-          <form id="addVideo">
-            <h2>Enter Vid: </h2>
-            <input type="text" name="linkcode"><br>
-            <input type="submit" value="Submit">
-          </form>
-            <button class="nav next">Next >></button>
-            <button class="nav prev"><< Prev</button>
+
         </div>
     </div>
 

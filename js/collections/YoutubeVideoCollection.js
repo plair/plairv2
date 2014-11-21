@@ -7,6 +7,7 @@ define([
 
   var YoutubeVideoCollection = Backbone.Collection.extend({
     model: YoutubeVideo,
+    comparator: 'trackNumber',
     initialize: function(options) {
       this.bind( 'add', this.onModelAddedd, this );
     },

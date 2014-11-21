@@ -159,16 +159,22 @@ input[type="submit"] {
 /* line 63, ../sass/_main.scss */
 .prev {
   float: left;
+  display: inline-block;
 }
 
-/* line 67, ../sass/_main.scss */
+/* line 68, ../sass/_main.scss */
+.next {
+  display: inline-block;
+}
+
+/* line 72, ../sass/_main.scss */
 .ag1 {
   width: 18.36735%;
   float: left;
   margin-right: 2.04082%;
 }
 
-/* line 71, ../sass/_main.scss */
+/* line 76, ../sass/_main.scss */
 .ag2 {
   width: 100%;
   float: left;
@@ -178,7 +184,7 @@ input[type="submit"] {
   *zoom: 1;
 }
 @media (min-width: 600px) {
-  /* line 71, ../sass/_main.scss */
+  /* line 76, ../sass/_main.scss */
   .ag2 {
     width: 100%;
     float: left;
@@ -187,7 +193,7 @@ input[type="submit"] {
   }
 }
 @media (min-width: 900px) {
-  /* line 71, ../sass/_main.scss */
+  /* line 76, ../sass/_main.scss */
   .ag2 {
     width: 100%;
     float: left;
@@ -196,14 +202,14 @@ input[type="submit"] {
   }
 }
 
-/* line 83, ../sass/_main.scss */
+/* line 88, ../sass/_main.scss */
 .ag3 {
   width: 65.90909%;
   float: left;
   margin-right: 2.27273%;
 }
 
-/* line 87, ../sass/_main.scss */
+/* line 92, ../sass/_main.scss */
 .ag4 {
   overflow: hidden;
   *zoom: 1;
@@ -212,35 +218,35 @@ input[type="submit"] {
   margin-right: 0;
 }
 
-/* line 92, ../sass/_main.scss */
+/* line 97, ../sass/_main.scss */
 .ag8 {
   width: 23.07692%;
   float: left;
   margin-right: 2.5641%;
 }
 
-/* line 96, ../sass/_main.scss */
+/* line 101, ../sass/_main.scss */
 .ag9 {
   width: 23.07692%;
   float: right;
   margin-right: 0;
 }
 
-/* line 100, ../sass/_main.scss */
+/* line 105, ../sass/_main.scss */
 .ag5 {
   width: 48.71795%;
   float: left;
   margin-right: 2.5641%;
 }
 
-/* line 104, ../sass/_main.scss */
+/* line 109, ../sass/_main.scss */
 .ag6 {
   width: 48.71795%;
   float: right;
   margin-right: 0;
 }
 
-/* line 111, ../sass/_main.scss */
+/* line 116, ../sass/_main.scss */
 .ag7 {
   width: 65.51724%;
   float: right;
@@ -249,7 +255,7 @@ input[type="submit"] {
   *zoom: 1;
 }
 
-/* line 118, ../sass/_main.scss */
+/* line 123, ../sass/_main.scss */
 .ag10 {
   clear: both;
 }
@@ -257,22 +263,22 @@ input[type="submit"] {
 /**
  * Styles for AG grids & Container
  */
-/* line 129, ../sass/_main.scss */
+/* line 134, ../sass/_main.scss */
 .container {
   background-color: #FFF;
 }
 
-/* line 145, ../sass/_main.scss */
+/* line 150, ../sass/_main.scss */
 .ag8, .ag9 {
   text-align: center;
 }
 
-/* line 155, ../sass/_main.scss */
+/* line 160, ../sass/_main.scss */
 .ag7 {
   background-color: #f6d784;
 }
 
-/* line 159, ../sass/_main.scss */
+/* line 164, ../sass/_main.scss */
 .ag10 {
   background-color: #ea9fc3;
 }
