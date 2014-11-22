@@ -11,7 +11,8 @@ define([
     template: _.template($("#navTemplate").html()),
 
     events: {
-      'click button.next': 'nextTrack'
+      'click button.next': 'nextTrack',
+      'click button.prev': 'prevTrack'
     },
 
     initialize: function() {
@@ -25,6 +26,12 @@ define([
       e.stopPropagation();
       require(['utils/EventDispatcher'], function (EventDispatcher) {
           EventDispatcher.trigger('cueNextTrack');
+      });
+    },
+    prevTrack: function(e){
+      e.stopPropagation();
+      require(['utils/EventDispatcher'], function (EventDispatcher) {
+          EventDispatcher.trigger('cuePrevTrack');
       });
     }
   });

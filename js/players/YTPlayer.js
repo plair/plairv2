@@ -29,10 +29,8 @@ define([
             EventDispatcher.trigger('playerLoaded');
             require(['utils/EventDispatcher'], function (EventDispatcher) {
 
-              EventDispatcher.on('playNext', function (nextTrack) {
-                console.log("nextTrack", nextTrack);
-                console.log("self", self);
-                player.cueVideoById({videoId: nextTrack});
+              EventDispatcher.on('playTrack', function (track) {
+                player.cueVideoById({videoId: track});
                 player.playVideo();
               });
 

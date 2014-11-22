@@ -34,11 +34,32 @@ define([
             var currentItem = testcollection.where({ currentTrack: true })[0];
             var currentIndex = testcollection.indexOf( currentItem );
             var nextTrack = testcollection.at( currentIndex+1);
+            console.log(testcollection.length);
+            if(currentIndex <= testcollection.length ){
+              currentItem.set('currentTrack', false);
+              nextTrack.set('currentTrack', true);
+              EventDispatcher.trigger('playTrack', nextTrack.get('youtubeCode') );
+            }else{
+              console.log("this is the end!");
+            }
 
-            currentItem.set('currentTrack', false);
-            nextTrack.set('currentTrack', true);
-            EventDispatcher.trigger('playNext', nextTrack.get('youtubeCode') );
-            console.log(nextTrack.get('youtubeCode'));
+          });
+
+          EventDispatcher.on('cuePrevTrack', function () {
+            var currentItem = testcollection.where({ currentTrack: true })[0];
+            var currentIndex = testcollection.indexOf( currentItem );
+            var prevTrack = testcollection.at( currentIndex-1);
+
+            // implement error handling here
+            if(currentIndex != 0){
+              console.log("not zero");
+              currentItem.set('currentTrack', false);
+              prevTrack.set('currentTrack', true);
+              EventDispatcher.trigger('playTrack', prevTrack.get('youtubeCode') );
+            }else{
+              console.log("this is zero!");
+            }
+
           });
       });
 

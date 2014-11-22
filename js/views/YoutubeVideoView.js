@@ -23,7 +23,8 @@ define([
     initialize: function() {
       this.render();
       this.model.on('destroy', this.remove, this);
-      this.model.on("change:currentTrack", this.changeCurrentState, this);
+      // this.model.on("change:currentTrack", this.changeCurrentState, this);
+      this.model.on("change:currentTrack", this.changeCurrentState($(this.el)), this);
     },
 
     render: function() {
@@ -37,9 +38,14 @@ define([
     remove: function(){
       this.$el.remove();
     },
-    changeCurrentState: function(){
-      this.$el.toggleClass("currentVid");
-      // console.log("changeCurrentState", this.$el);
+    changeCurrentState: function(track){
+      console.log("traxxx", this.model.get('currentTrack'));
+
+      if(this.model.get('currentTrack') === true){
+        track.toggleClass('currentVid');
+      }
+
+      // $('li[data-youtube=' + this.model.get("youtubeCode") + ']').toggleClass('currentVid');
     }
   });
   return YoutubeVideoView;
