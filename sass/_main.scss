@@ -6,8 +6,10 @@
 .container{
   @include container;
   @include clearfix;
+  padding-top: 80px;
   padding-left: 6%;
   padding-right: 6%;
+  padding-bottom: 50px;
 }
 
 ul.video-list{
@@ -67,6 +69,18 @@ input[type="submit"]{
 
 .next{
   display: inline-block;
+}
+
+div.scrollable{
+  overflow-y: auto;
+}
+
+.playlist{
+  overflow: hidden;
+}
+
+.navigation{
+  padding-bottom: 20px;
 }
 
 .ag1 {

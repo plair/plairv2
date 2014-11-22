@@ -37,6 +37,9 @@ define([
             });
          },
           'onStateChange': function(){
+            if(player.getPlayerState() === 0){
+              EventDispatcher.trigger('cueNextTrack');
+            }
             // if(YTPlayer.getPlayerState() === 0){
             //   var currentVid = $('li.currentVid');
             //   var nextCode = currentVid.next().data("youtube");
