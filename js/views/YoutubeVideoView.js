@@ -39,7 +39,7 @@ define([
     },
     changeCurrentState: function(){
       this.$el.toggleClass("currentVid");
-      console.log("changeCurrentState", this.$el);
+      // console.log("changeCurrentState", this.$el);
     }
   });
   return YoutubeVideoView;

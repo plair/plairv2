@@ -26,7 +26,17 @@ define([
        height: '390',
        events: {
          'onReady': function() {
-           EventDispatcher.trigger('playerLoaded');
+            EventDispatcher.trigger('playerLoaded');
+            require(['utils/EventDispatcher'], function (EventDispatcher) {
+
+              EventDispatcher.on('playNext', function (nextTrack) {
+                console.log("nextTrack", nextTrack);
+                console.log("self", self);
+                player.cueVideoById({videoId: nextTrack});
+                player.playVideo();
+              });
+
+            });
          },
           'onStateChange': function(){
             // if(YTPlayer.getPlayerState() === 0){
@@ -82,6 +92,7 @@ define([
 
    testFunction: function(){
       console.log("dis is da test function");
+      console.log();
    }
  };
 

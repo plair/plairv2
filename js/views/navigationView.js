@@ -24,10 +24,8 @@ define([
     nextTrack: function(e){
       e.stopPropagation();
       require(['utils/EventDispatcher'], function (EventDispatcher) {
-          EventDispatcher.trigger('playNext');
+          EventDispatcher.trigger('cueNextTrack');
       });
-
-      console.log("nextTrack worked");
     }
   });
   return new navigationView;
