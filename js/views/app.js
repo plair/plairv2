@@ -61,6 +61,18 @@ define([
             }
 
           });
+
+          EventDispatcher.on('selectTrack', function (trackCode) {
+            console.log("track code", trackCode);
+            var currentItem = testcollection.where({ currentTrack: true })[0];
+            var selectedTrack = testcollection.where({ youtubeCode: trackCode })[0];
+
+            console.log("selectedTrack",selectedTrack);
+            currentItem.set('currentTrack', false);
+            selectedTrack.set('currentTrack', true);
+
+            EventDispatcher.trigger('playTrack', selectedTrack.get('youtubeCode') );
+          });
       });
 
       YTPlayer.playVideo('player', testcollection.at(0).get('youtubeCode'));

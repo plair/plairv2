@@ -1,9 +1,10 @@
 define([
   'jquery',
   'underscore',
-  'backbone'
+  'backbone',
+  'utils/EventDispatcher'
   // 'text!templates/youtubeVideo.html'
-  ], function($, _, Backbone){
+  ], function($, _, Backbone, EventDispatcher){
   var YoutubeVideoView = Backbone.View.extend({
     attributes: function(){
       return {
@@ -17,7 +18,8 @@ define([
 
     // The DOM events specific to an item.
     events: {
-      'click .removeTrack': 'destroy'
+      'click .removeTrack': 'destroy',
+      'click': 'selectTrack'
     },
 
     initialize: function() {
@@ -39,13 +41,15 @@ define([
       this.$el.remove();
     },
     changeCurrentState: function(track){
-      console.log("traxxx", this.model.get('currentTrack'));
-
+      //console.log("traxxx", this.model.get('currentTrack'));
       if(this.model.get('currentTrack') === true){
         track.toggleClass('currentVid');
       }
-
-      // $('li[data-youtube=' + this.model.get("youtubeCode") + ']').toggleClass('currentVid');
+    },
+    selectTrack: function(e){
+      e.stopPropagation();
+      var trackCode = this.model.get('youtubeCode');
+      EventDispatcher.trigger('selectTrack', trackCode);
     }
   });
   return YoutubeVideoView;
