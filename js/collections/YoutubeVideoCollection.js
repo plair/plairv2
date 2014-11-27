@@ -9,9 +9,9 @@ define([
     model: YoutubeVideo,
     comparator: 'trackNumber',
     initialize: function(options) {
-      this.bind( 'add', this.onModelAddedd, this );
+      this.bind( 'add', this.onModelAdded, this );
     },
-    onModelAddedd: function(model, collection, options) {
+    onModelAdded: function(model, collection, options) {
       Backbone.ajax({
         url: "http://gdata.youtube.com/feeds/api/videos/" + model.get('youtubeCode'),
         success: function(result){

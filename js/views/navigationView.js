@@ -43,8 +43,6 @@ define([
         var match = url.match(regExp);
         if (match&&match[7].length==11){
             return match[7];
-        }else{
-            alert("not a valid link");
         }
       }
       var value = youtube_parser( $(this.el).find("input[type='text']").val() );
